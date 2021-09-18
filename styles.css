@@ -29,12 +29,12 @@ li{
     width:20%;
     position:relative;
 }
-li a::after{
+li a::before{
     content:"";
     right:50%;
     left:50%;
+    bottom:-1px;
     position:absolute;
-    bottom:-0.1px;
     background: grey;
     height:2px;
     -webkit-transition-property: left, right;
@@ -42,7 +42,7 @@ li a::after{
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
 }
-li a:focus::after, li a:active::after, li a:hover::after{
+li a:focus::before, li a:active::before, li a:hover::before{
     left:30%;
     right:30%;
 }
@@ -56,15 +56,14 @@ li a{
     border-right: none;
 }
 .div2{
-    margin-top:10%;
     width:45%;
     display: flex;
     flex-flow:row wrap;
     justify-content: center;
-    margin-left:5px;
-    float:left;
     background-color:rgb(235, 232, 232);
     padding-left:5px;
+    transition-property:transform;
+    transition-duration:0.3s;
 }
 h1{
     font-size:6em;
@@ -75,14 +74,15 @@ p{
 }
 .div3{
     width:45%;
-    margin-top:35%;
     display: flex;
     flex-flow:row wrap;
     justify-content: center;
-    float:right;
     background-color:rgb(235, 232, 232);
     text-align: right;
     padding-right:5px;
+    margin-bottom:6%;
+    transition-property:transform;
+    transition-duration:0.3s;
 }
 #triangle{
     height:0;
@@ -94,26 +94,61 @@ p{
     align-self: center;
 }
 #commandMe{
-    float:right;
-    margin-top:27.5%;
-    margin-right:13%;
     user-select: none;
+    margin-bottom: 14%;
 }
 #aboutMe{
-    margin-top:20%;
-    margin-left:15%;
     user-select: none;
-    float:left;
+    margin-right:5%;
+    margin-bottom:9%;
 }
 #carre{
     height:120px;
     width:120px;
     background-color:grey;
 }
-.anim{
+#grosseDiv1{
+    display: flex;
+    flex-flow: row wrap-reverse;
+    justify-content: space-around;
+    align-items:center;
+    margin-top:10%;
+}
+#grosseDiv2{
     display:flex;
-    float:left;
-    flex-direction: column;
-    margin-top:23%;
-    margin-left:-15%;
+    flex-flow:row-reverse wrap-reverse;
+    justify-content:space-around;
+    align-items:center;
+    margin-top:26%;
+}
+h1::after{
+    content:"";
+    display:block;
+    width: 0%;
+    height:5px;
+    background-color:grey;
+    transition-property:width;
+    transition-duration:0.3s;
+}
+h1:hover::after,h1:active::after{
+    width:100%;
+}
+.div2:hover,.div3:hover{
+    transform:scale(1.1);
+}
+@media all and (max-width:1200px){
+    #aboutMe{
+        margin-right:0;
+        margin:initial auto;
+    }
+    .div2{
+        width:90%;
+    }
+    #commandMe{
+        margin:initial auto;
+        text-align:center
+    }
+    .div3{
+        width:90%;
+    }
 }
