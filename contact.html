@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr eu" dir="ltr">
+    <head>
+        <title>Léo - Portfolio</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+        <script type="text/javascript" src="anim.js" async></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul> 
+                    <li><a href="index.html" class="menu">Home</a></li>
+                    <li><a href="project.html" class="menu">Projects</a></li>
+                    <li><a href="contact.html" class="pa1">Contact</a></li>
+                    <li id="about"><a href="about.html" class="menu">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1 class="title">Contact me</h1>
+            <form action="form.php" method="POST" id="formulaire">
+                <fieldset>
+                    <label for="mail">Enter your mail</label>
+                    <input type="email" id="mail" placeholder="*email" required>
+                    <div class="bgSupreme">
+                        <div class="bg1"> 
+                            <label for="personnal">Personal</label>
+                            <input type="radio" id="personnal" name="what" required>
+                        </div>
+                        <div class="bg2">
+                            <label for="professional">Professional</label>
+                            <input type="radio" id="professional" name="what" required>
+                        </div>
+                    </div>
+                    <label for='continent'>Continent</label>
+                    <select id="continent" name="continent">
+                        <option value="africa">Africa</option>
+                        <option value="northAmerica">North-America</option>
+                        <option value="southAmerica">South-America</option>
+                        <option value="europa">Europa</option>
+                        <option value="asia">Asia</option>
+                        <option value="oceania">Oceania</option>
+                    </select>
+                    <label for='texte'>Text me</label>
+                    <textarea type="textarea" required minlength="20" maxlength="500" id='texte' placeholder="*Text me"></textarea>
+                    <button type="submit">SEND</button>
+                </fieldset>
+            </form>
+        </main>
+        <footer>
+            <div class="foot">
+                <div class="developpeur">
+                    <h2>Developer</h2>
+                    <p>Web developer/concepter Picard Léo</p>
+                    <p>This site don't use cookies</p>
+                    <p>No personal data are collected</p>
+                </div>
+                <div class="resources">
+                    <h2>Resources</h2>
+                    <p><a href="https://github.com" target="_blank" class="lien">Site hosted on github</a></p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
