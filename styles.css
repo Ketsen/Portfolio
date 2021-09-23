@@ -1,0 +1,434 @@
+html, body{
+    margin:0;
+    padding:0;
+    background-color: rgb(243, 242, 242);
+}
+nav{
+    width:100%;
+    position: fixed;
+    top:0;
+    z-index:1000;
+}
+ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height:55px;
+    background-color:rgb(235, 232, 232);
+}
+.div2,.div3,.div4,.div5,.div6{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background:linear-gradient(to right top, rgb(235, 232, 232),80%, rgb(210, 210, 210));
+}
+li{
+    font-size:1.6em;
+    height:100%;
+    display: block;
+    line-height: 55px;
+    border-right: black solid 1px;
+    flex:1 1 0;
+    position:relative;
+}
+.pa1{
+    font-size:1.1em;
+}
+.pa1::after{
+    content:"";
+    display:block;
+    width:45%;
+    margin:0 auto;
+    background: grey;
+    height:2px;
+}
+li .menu::after{
+    content:"";
+    display:block;
+    width:45%;
+    margin:0 auto;
+    background: grey;
+    height:2px;
+    transform:scale(0);
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;              /*Animation soulignement navbar*/
+}
+li .menu:active::after, li .menu:hover::after{
+    transform:scale(1);
+}
+li .menu:hover,li .menu:active{
+    font-size:1.1em;
+}
+li a{
+    text-decoration: none;
+    color:grey;
+    display:block;
+    text-align:center
+}
+#about{
+    border-right: none;
+}
+.div2{
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: center;
+    text-align:center;
+    transition-property:transform;
+    transition-duration:0.3s;
+}
+h1{
+    font-size:6em;
+    font-family: sans-serif;
+    text-shadow: rgba(128, 128, 128, 0.2) 5px 5px;
+    align-self: center;
+    width:max-content;
+    user-select: none;
+}
+p{
+    font-size:1.2em;
+}
+.div3{
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: center;
+    text-align: center;
+    transition-property:transform;
+    transition-duration:0.3s;
+}
+#triangle{
+    height:0;
+    width:0;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent; 
+    border-left: 100px solid grey;
+    transform:rotate(-90deg);
+    align-self: center;
+}
+#commandMe{
+    user-select: none;
+}
+#aboutMe{
+    user-select: none;
+}
+#carre{
+    height:120px;
+    width:120px;
+    background-color:grey;
+}
+h1::after{
+    content:"";
+    display:block;
+    width:0;
+    height:5px;
+    background-color:grey;
+    transition-property:width;
+    transition-duration:0.3s;          /*Animation soulignement titres*/
+}
+h1:hover::after,h1:active::after{
+    width:100%;                   
+}
+h2::after,.lienProject::after{
+    content:"";
+    display:block;
+    height:2.5px;
+    background-color:grey;
+    transform:scale(0);
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+h2:hover::after, .lienProject:hover::after{
+    transform:scale(1.1);                   
+}
+.div2:hover,.div3:hover,.div4:hover,.div5:hover,.div6:hover,.aboutDiv:hover{
+    transform:scale(1.1);
+    /*Grossir les divs grises*/
+}
+.div4{
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: center;
+    text-align: center;
+    transition-property:transform;
+    transition-duration:0.3s;
+}
+#contactMe{
+    user-select: none;;
+}
+#myProjects{
+    user-select: none;
+}
+.div5{
+    display: flex;
+    flex-flow:row-reverse wrap;
+    justify-content: center;
+    transition-property:transform;
+    transition-duration:0.3s;
+}
+#container{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top:3%;
+    flex:1 1 auto;
+}
+.title{
+    margin:0 auto;
+    margin-top:6%;
+    margin-bottom:2%;
+}
+.foot{                  /*Bas des pages*/
+    display: flex;
+    background-color:rgb(37, 37, 37);
+    font-family: sans-serif;
+    flex-direction:row;
+    justify-content: space-around;
+    color:whitesmoke;
+    margin-top:10%;
+    width:100%;
+}
+h2{
+    font-size:1.8em;
+}
+.resources{
+    display: block;
+}
+.lien{
+    text-decoration: none;
+    color:whitesmoke;
+    font-family:sans-serif;
+}
+.lien:hover{
+    color:rgb(212, 211, 211);
+}
+main div .div2,.div3,.div4,.div5,.div6{
+    flex:1 1 0;
+    max-width:1000px;
+    margin:40px 0;
+    padding:0 5px;
+}
+#COMMAND2{
+    display: none;
+}
+main form fieldset{
+    padding-top: 20px;
+    padding-left:0px;
+    padding-right:0px;
+    padding-bottom: 0;
+    display: block;
+    width:25%;
+    height: 50vh;
+    margin:0 auto;
+    font-size:1.5em;
+    background-color: rgb(235, 232, 232);
+    margin-top:10px;
+    border:10px solid rgb(58, 57, 57); 
+    min-width:330px;
+    min-height:400px;
+    box-shadow: rgb(0, 0, 0, 0.6) 0px 3px 8px;
+}
+::placeholder{
+    font-size:1.1em;
+}
+main form fieldset label{
+    font-family: sans-serif;
+}
+main form fieldset label[for="mail"], label[for="continent"], label[for="texte"]{
+    display: none;
+}
+main form fieldset>*{
+    margin:0 auto;
+    margin-top:30px;
+}
+main form fieldset option,input,button,label{
+    display: block;
+    color:black;
+}
+main form fieldset input,textarea{
+    color: black;
+    background-color: rgb(235, 232, 232);
+    border-style: none;
+    border-bottom: black 1px solid;
+    height:8%;
+    width:80%;
+    font-size:0.7em;
+}
+main form fieldset textarea{
+    font-size:0.8em;
+}
+.bgSupreme{
+    display: flex;
+    flex-direction:row;
+    width:60%;
+}
+.bgSupreme input{
+    height:15px;
+}
+.bgSupreme div{
+    height:100%;
+    display: flex;
+    float:left;
+    width:48%;
+    flex-flow:column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main form fieldset button,select{
+    color: black;
+    background-color: rgb(235, 232, 232);
+    border: black 1px solid;
+    height:5.5%;
+}
+main form fieldset select{
+    border-style:none;
+    border-bottom: black 1px solid;
+    outline-width:0;
+    user-select:none;
+}
+select,textarea{
+    display: block;
+}
+input:focus,textarea:focus{
+    outline-width: 0;
+    border-bottom-color: rgb(109, 106, 106);
+}
+main form fieldset button{
+    width:20%;
+    user-select:none;
+}
+main form fieldset textarea{
+    height:10%;
+    resize: none;
+}
+main form fieldset textarea:focus{
+    animation-name: place1;
+}
+main form fieldset input[type="email"]:focus{
+    animation-name: place2;
+}
+main form fieldset button:active{
+    position:relative;
+    top:1px;
+}
+::selection{
+    background-color: rgba(204, 197, 197, 0.6);
+    color: rgb(49, 48, 48);
+}
+.aboutFlex{
+    display:flex;
+    flex-flow:row wrap;
+    flex:1 1 0;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.aboutDiv{
+    flex:1 1 auto;
+    display: flex;
+    flex-flow:column nowrap;
+    background:linear-gradient(to right top, rgb(235, 232, 232),80%, rgb(210, 210, 210));
+    max-width:25%;
+    text-align:center;
+    min-height:500px;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+main div div h2{
+    font-size: 2.6em;
+    font-family: sans-serif;
+    max-width: fit-content;
+    margin:20px auto;
+    transition:0.5s;
+}
+.aboutP{
+    font-size:1.9em;
+}
+.allProjects{
+    display: flex;
+    flex-flow:column nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    height:500px;
+    flex:1 1 0;
+    width:28.5%;
+    background:linear-gradient(to right top, rgb(235, 232, 232),80%, rgb(210, 210, 210));
+    margin:0 auto;
+    box-shadow: rgb(0, 0, 0, 0.6) 0px 3px 8px;
+}
+.lienProject{
+    text-decoration: none;
+    color:black;
+    font-family: sans-serif;
+    font-size: 3em;
+    font-weight: 600;
+    text-align:center;
+}
+.lienProject:hover{
+    color:rgb(75, 74, 74);
+}
+
+
+@media all and (max-width:1500px){
+    main div div{
+        width:65%;
+    }
+}
+@media all and (max-width:1200px){
+    main div div{
+        width:70%;
+    }
+}
+@media all and (max-width:1200px){
+    main div div{
+        width:80%;
+    }
+}
+@media all and (max-width:650px){
+    main div h1{
+        width:99%;
+        text-align: center;
+    }
+}
+@media all and (max-width:540px){
+    #COMMAND{
+        display: none;
+    }
+    #COMMAND2{
+        display:block;
+    }
+}
+@media all and (max-width:1200px){
+    .aboutFlex{
+        flex-flow:column nowrap;
+        gap:80px;
+    }
+    .aboutDiv{
+        min-width:45%;
+        margin-top:20px;
+    }
+}
+@media all and (max-width:650px){
+    .aboutDiv{
+        min-width:60%;
+    }
+}
+@media all and (max-width:520px){
+    .title{
+        width:min-content;
+        text-align:center;
+    }
+}
+@media all and (max-width:720px){
+    .title{
+        margin-top:10%;
+    }
+}
