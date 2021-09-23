@@ -226,9 +226,8 @@ main form fieldset{
     height: 50vh;
     margin:0 auto;
     font-size:1.5em;
-    background-color: rgb(235, 232, 232);
+    background-color: whitesmoke;
     margin-top:10px;
-    border:10px solid rgb(58, 57, 57); 
     min-width:330px;
     min-height:400px;
     box-shadow: rgb(0, 0, 0, 0.6) 0px 3px 8px;
@@ -252,7 +251,7 @@ main form fieldset option,input,button,label{
 }
 main form fieldset input,textarea{
     color: black;
-    background-color: rgb(235, 232, 232);
+    background-color: whitesmoke;
     border-style: none;
     border-bottom: black 1px solid;
     height:8%;
@@ -282,7 +281,7 @@ main form fieldset textarea{
 
 main form fieldset button,select{
     color: black;
-    background-color: rgb(235, 232, 232);
+    background-color: whitesmoke;
     border: black 1px solid;
     height:5.5%;
 }
@@ -353,16 +352,10 @@ main div div h2{
     font-size:1.9em;
 }
 .allProjects{
-    display: flex;
-    flex-flow:column nowrap;
-    align-items: center;
-    justify-content: space-evenly;
-    height:500px;
-    flex:1 1 0;
-    width:28.5%;
-    background:linear-gradient(to right top, rgb(235, 232, 232),80%, rgb(210, 210, 210));
+    padding-top: 10px;
     margin:0 auto;
-    box-shadow: rgb(0, 0, 0, 0.6) 0px 3px 8px;
+    width:max-content;
+    text-align: center;
 }
 .lienProject{
     text-decoration: none;
@@ -375,7 +368,6 @@ main div div h2{
 .lienProject:hover{
     color:rgb(75, 74, 74);
 }
-
 
 @media all and (max-width:1500px){
     main div div{
