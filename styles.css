@@ -229,8 +229,7 @@ main form fieldset{
     background-color: whitesmoke;
     margin-top:10px;
     min-width:330px;
-    min-height:400px;
-    max-height:450px;
+    height:400px;
     box-shadow: rgb(0, 0, 0, 0.6) 0px 3px 8px;
 }
 ::placeholder{
